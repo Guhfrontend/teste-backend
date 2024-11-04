@@ -2,6 +2,7 @@ package com.fattocs.tecnico.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.websocket.OnMessage;
 
 @Entity
 @Table(name = "tb_tarefas")
@@ -13,7 +14,7 @@ public class Tarefa {
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @NotNull(message = "O nome da tarefa deve ser informado")
     @Column(unique = true)
     private String nome;
 

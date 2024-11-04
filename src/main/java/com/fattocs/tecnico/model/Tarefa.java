@@ -24,6 +24,7 @@ public class Tarefa {
     @NotNull
     private String dataLimite;
 
+    @Column(unique = true)
     private Integer ordem;
 
     public Tarefa() {
