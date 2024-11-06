@@ -32,7 +32,7 @@ public class TarefaController{
     @PostMapping
     public ResponseEntity<Tarefa> post(@Valid @RequestBody Tarefa tarefa) {
         if (tarefaRepository.existsByNome(tarefa.getNome()))
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(tarefa);
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
 
         Tarefa novaTarefa = tarefaRepository.save(tarefa);
         return ResponseEntity.status(HttpStatus.CREATED).body(novaTarefa);
@@ -40,7 +40,7 @@ public class TarefaController{
 
     @PutMapping("/{id}") public ResponseEntity<Tarefa> put(@Valid @RequestBody Tarefa tarefa, @PathVariable Long id) {
         if (tarefaRepository.existsByNome(tarefa.getNome()))
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(tarefa);
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
 
         return tarefaRepository.findById(id) .map(resposta -> { tarefa.setId(id); tarefaRepository.save(tarefa); return ResponseEntity.ok(tarefa); }) .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
