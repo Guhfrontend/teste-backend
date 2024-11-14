@@ -4,7 +4,7 @@
 # Sobre o projeto
 
 
-Projeto Técnico Backend, é um teste técnico para uma emrpresa de consultoria a proposta é fazer um todo list.
+Projeto Técnico Backend, é um teste técnico para uma empresa de consultoria a proposta é fazer um todo list funcional.
 
 Este projeto utilizamos Java Spring e Jpa/Hibernate para fazer um CRUD como resposta para o Frontend, utilizando anotações do Framework Spring conseguimos implementar um banco de dados, tabelas e atributos.
 Usado o modelo conceitual para modelar a orientação a objetos e ser utilizado as anotações das melhor forma, com tratamento de exceções e loops, um projeto completo.
